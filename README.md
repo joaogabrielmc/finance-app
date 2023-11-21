@@ -22,18 +22,20 @@ Este projeto utiliza as seguintes dependências:
 ## Instalação
 
 1. Clone este repositório.
-   ```bash git clone 
-
+```bash
+git clone
+```
 2. Instale as dependencias
-  ```bash npm install
-
+```bash
+npm install 
+```
 3. Crie um arquivo `.env` 
   - PORT: 2121 (Pode ser qualquer porta, exeomplo: 3000) 
   - DB_STRING: `database URI`
-
 4. Inicie a aplicação
-  ```bash npm run start
-
+```bash
+npm run start
+```
 # FinApi - Financeira
 ## Requisitos
 ### Conta do Usuário
@@ -44,7 +46,7 @@ Este projeto utiliza as seguintes dependências:
 ### Transações
 - [x] Deve ser possível adicionar despesas, incluindo informações como categoria, valor e data
 - [x] Deve ser possível ser possível visualizar o saldo atual
-- [] Deve ser possível ser possível editar o saldo atual
+- [] Deve ser possível ser possível editar a transação
 
 ### Regras de Negócio
 - [x] Não deve ser possível cadastrar uma conta com um e-mail já existente no sistema

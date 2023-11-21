@@ -7,7 +7,7 @@ module.exports = {
             const amount = TransactionItems.reduce((previous, el) => {
                 return previous + el.value;
             }, 0);
-            res.render('finance.ejs', { finance: TransactionItems, amount: amount, user: req.user })
+            res.render('finance.ejs', { finance: TransactionItems, amount: amount, user: req.user, userName: req.user.userName })
         } catch (err) {
             console.log(err)
         }

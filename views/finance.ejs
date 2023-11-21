@@ -15,7 +15,7 @@
     </div>
     <main>
       <form action="/finance/createTransaction" method="POST">
-        <h2>Usuário</h2>
+        <h2>Usuário: <%= userName %></h2>
         <label for="tipo">Tipo:</label>
         <select id="type" name="type">
           <option value="Despesa">Despesa</option>
@@ -39,7 +39,7 @@
         <section id="types">
           <div class="transaction">
             <span class="span-gap">
-              <span>Tipo |</span>
+              <span id="types-e">Tipo</span>
               <span> Nome</span>
             </span>
             <span class="date">Data</span>
@@ -53,7 +53,7 @@
         <section id="transactions">
           <div class="transaction" data-id="<%=e._id%>">
             <span class="span-gap">
-              <span><%= e.type %> | </span>
+              <span id="types-e"><%= e.type %></span>
               <span id=""><%= e.transaction %></span>
             </span>
             <span class="date"><%= e.date %></span>

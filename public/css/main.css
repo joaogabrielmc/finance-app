@@ -141,6 +141,10 @@ button + button {
   width: 150px;
 }
 
+#types-e{
+  width: 70px;
+}
+
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
