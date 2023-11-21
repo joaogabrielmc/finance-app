@@ -22,20 +22,20 @@ Este projeto utiliza as seguintes dependências:
 ## Instalação
 
 1. Clone este repositório.
-   ```bash
-      git clone
-   ```
+```bash
+git clone
+```
 2. Instale as dependencias
-   ```bash
-      npm install 
-   ```
+```bash
+npm install 
+```
 3. Crie um arquivo `.env` 
   - PORT: 2121 (Pode ser qualquer porta, exeomplo: 3000) 
   - DB_STRING: `database URI`
 4. Inicie a aplicação
-  ```bash
-     npm run start
-  ```
+```bash
+npm run start
+```
 # FinApi - Financeira
 ## Requisitos
 ### Conta do Usuário
