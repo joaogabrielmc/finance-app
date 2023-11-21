@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minhas Finanças</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Minhas Finanças</h1>
+      <button><a href="/logout">Logout</a></button>
+    </div>
+    <main>
+      <form action="/finance/createTransaction" method="POST">
+        <h2>Usuário</h2>
+        <label for="tipo">Tipo:</label>
+        <select id="type" name="type">
+          <option value="Despesa">Despesa</option>
+          <option value="Renda">Renda</option>
+        </select>
+        <label for="nameItem">Nome:</label>
+        <input type="text" id="nameItem" name="nameItem" />
+        <label for="amount">Valor:</label>
+        <input type="number" step="0.01" id="amount" name="valueItem" />
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" />
+        <br /><br />
+        <button type="submit">Adicionar</button>
+      </form>
+      <div>
+        <h2 class="amount">
+          Saldo:
+          <section><%= amount %></section>
+        </h2>
+        <h2>Histórico de Transações</h2>
+        <section id="types">
+          <div class="transaction">
+            <span class="span-gap">
+              <span>Tipo |</span>
+              <span> Nome</span>
+            </span>
+            <span class="date">Data</span>
+            <span class="span-gap-1">
+              <span>Valor |</span>
+              <span> Deletar</span>
+            </span>
+          </div>
+        </section>
+        <% finance.forEach( e=> { %>
+        <section id="transactions">
+          <div class="transaction" data-id="<%=e._id%>">
+            <span class="span-gap">
+              <span><%= e.type %> | </span>
+              <span id=""><%= e.transaction %></span>
+            </span>
+            <span class="date"><%= e.date %></span>
+            <span class="span-gap-1">
+              <span id=""><%= e.value %></span>
+              <button class="del">🗑</button>
+            </span>
+          </div>
+        </section>
+        <% }) %>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

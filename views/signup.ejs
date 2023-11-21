@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el=> { %>
+            <div class="alert alert-danger">
+                <%= el.msg %>
+            </div>
+            <% }) %>
+                <% } %>
+
+                    <div class="register">
+                        <img src="./login.svg" alt="">
+                        <section class="signup">
+                            <div class="p">
+                                <h1>Registre<h1>
+                            </div>
+                            <form action="/signup" method="POST">
+                                <label>Your name</label>
+                                <input type="text" name="userName" placeholder="User Name">
+                                <label>E-mail</label>
+                                <input type="email" name="email" placeholder="Email">
+                                <label>Password</label>
+                                <input type="password" name="password" placeholder="Password">
+                                <label>Confirm Password</label>
+                                <input type="password" name="confirmPassword" placeholder="Confirm Password">
+                                <input type="submit">
+                            </form>
+                            <p class="def">Já tem conta?<a href="/login">Login aqui!</a></p>
+                        </section>
+                    </div>
+</body>
+
+</html>

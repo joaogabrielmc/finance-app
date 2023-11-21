@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: black;
+  }
+  
+  img {
+    width: 500px;
+    height: 500px;
+  }
+  
+  body {
+    background-color: #344a72;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .login {
+    background: linear-gradient(90deg, #ebefff 0%, #afb3ff 91.54%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .register {
+    background: #afb3ff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+    margin-back: 70px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  .not {
+    text-decoration: underline;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  form label {
+    color: black;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border-radius: 6px;
+    border: 1px solid #656ed3;
+    background: transparent;
+  }
+  input[type="submit"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background: #656ED3;
+    color: white;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    color: black;
+  }
+  .def {
+    text-align: center;
+    color: black;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .def a{
+    color: purple;
+    font-weight: 900;
+  }
+  

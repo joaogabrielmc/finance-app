@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1c1a1d;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+main > form {
+  flex: 1;
+}
+
+main > div {
+  flex: 3;
+}
+
+h1 {
+  margin: 2rem 2rem 0;
+}
+
+h2 {
+  background-color: #39353b;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+label {
+  display: block;
+  margin: 1.5rem 0 0.5rem;
+}
+
+input {
+  background-color: #39353b;
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+select {
+  background-color: #39353b;
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+button {
+  background-color: #6bf394;
+  border: 0;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+form > button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+button + button {
+  margin-left: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px 0px 0px;
+}
+
+.transactions {
+  width: 100%;
+}
+.types {
+  width: 100%;
+  background-color: #39353b;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #39353b;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.transaction:first-child {
+  margin-top: 1rem;
+}
+
+.del {
+  font-size: 20px;
+  font-width: 700;
+  background: red;
+}
+
+.amount{
+  display:flex;
+  align-items: space-between;
+  justify-content: space-between;
+}
+
+.span-gap {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  width: 190px;
+}
+
+.span-gap-1 {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+}
+
+.date {
+  width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
