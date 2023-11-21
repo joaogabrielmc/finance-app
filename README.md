@@ -46,7 +46,7 @@ Este projeto utiliza as seguintes dependências:
 ### Transações
 - [x] Deve ser possível adicionar despesas, incluindo informações como categoria, valor e data
 - [x] Deve ser possível ser possível visualizar o saldo atual
-- [] Deve ser possível ser possível editar o saldo atual
+- [] Deve ser possível ser possível editar a transação
 
 ### Regras de Negócio
 - [x] Não deve ser possível cadastrar uma conta com um e-mail já existente no sistema
