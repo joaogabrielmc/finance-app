@@ -1,13 +1,18 @@
 const Transaction = require('../models/Transaction')
+const formater = Intl.NumberFormat("pt-BR", {
+    compactDisplay: "long",
+    currency: "BRL",
+    style: "currency",
+  });
 
 module.exports = {
     getfinance: async (req, res) => {
         try {
             const TransactionItems = await Transaction.find({ userId: req.user.id })
             const amount = TransactionItems.reduce((previous, el) => {
-                return previous + el.value;
+                return previous + Number(el.value);
             }, 0);
-            res.render('finance.ejs', { finance: TransactionItems, amount: amount, user: req.user, userName: req.user.userName })
+            res.render('finance.ejs', { finance: TransactionItems, amount: amount, user: req.user, userName: req.user.userName, formater })
         } catch (err) {
             console.log(err)
         }

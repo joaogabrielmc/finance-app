@@ -24,7 +24,7 @@
         <label for="nameItem">Nome:</label>
         <input type="text" id="nameItem" name="nameItem" required/>
         <label for="amount">Valor:</label>
-        <input type="number" step="0.01" id="amount" name="valueItem" required/>
+        <input type="number" step="0.01" id="amount" name="valueItem" step="10" required/>
         <label for="data">Data:</label>
         <input type="date" id="data" name="data" required/>
         <br /><br />
@@ -33,7 +33,7 @@
       <div>
         <h2 class="amount">
           Saldo:
-          <section><%= amount %></section>
+          <section><%= formater.format(amount) %></section>
         </h2>
         <h2>Histórico de Transações</h2>
         <section id="types">
@@ -58,7 +58,7 @@
             </span>
             <span class="date"><%= e.date %></span>
             <span class="span-gap-1">
-              <span id=""><%= e.value %></span>
+              <span id=""><%= formater.format(e.value) %></span>
               <button class="del">🗑</button>
             </span>
           </div>
