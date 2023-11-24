@@ -13,12 +13,11 @@ exports.getLogin = (req, res) => {
 
 exports.postLogin = (req, res, next) => {
   const validationErrors = []
-  if (!validator.isEmail(req.body.email)) {validationErrors.push({ msg: 'Insira um email valido' })}
+  if (!validator.isEmail(req.body.email)) { validationErrors.push({ msg: 'Insira um email valido' }) }
   if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'A senha não pode ser nula' })
 
   if (validationErrors.length) {
-    // req.flash('errors', validationErrors)
-    alert(validationErrors)
+    req.flash('errors', validationErrors)
     return res.redirect('/login')
   }
   req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false })
@@ -64,8 +63,7 @@ exports.postSignup = (req, res, next) => {
   if (req.body.password !== req.body.confirmPassword) validationErrors.push({ msg: 'As senhas não conferem' })
 
   if (validationErrors.length) {
-    // req.flash('errors', validationErrors)
-    alert(validationErrors)
+    req.flash('errors', validationErrors)
     return res.redirect('../signup')
   }
   req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false })
@@ -84,8 +82,7 @@ exports.postSignup = (req, res, next) => {
   }, (err, existingUser) => {
     if (err) { return next(err) }
     if (existingUser) {
-      // req.flash('errors', { msg: 'Já existe uma conta com tal email.' })
-      alert('Já existe uma conta com tal email.' )
+      req.flash('errors', { msg: 'Já existe uma conta com tal email.' })
       return res.redirect('../signup')
     }
     user.save((err) => {

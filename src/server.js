@@ -6,12 +6,12 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('express-flash')
 const logger = require('morgan')
-const connectDB = require('./src/config/database')
-const mainRoutes = require('./src/routes/main')
-const transactionRoutes = require('./src/routes/finance')
+const connectDB = require('./config/database')
+const mainRoutes = require('./routes/main')
+const transactionRoutes = require('./routes/finance')
 
 require('dotenv').config()
-require('./src/config/passport')(passport)
+require('./config/passport')(passport)
 
 connectDB()
 
